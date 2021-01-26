@@ -1,4 +1,4 @@
 octave
-octave-image
+octave-control
 gnuplot
 ghostscript
