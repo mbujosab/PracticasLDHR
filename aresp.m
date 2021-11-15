@@ -66,27 +66,27 @@
 %% usage:  [arespt,s2_e,n_retardos,AR,raices,norma,periodos] = aresp...
 %%    (y,lag_range,crit,IA,nfrec)
 %%
-%% EstimaciÛn del AR-espectro de una serie temporal. 
+%% Estimaci√≥n del AR-espectro de una serie temporal. 
 %%
 %% y                > serie temporal
-%% lag_range * > [orden mÌnimo retardos, orden m·ximo] % ([1 T/3])
+%% lag_range * > [orden m√≠nimo retardos, orden m√°ximo] % ([1 T/3])
 %%                     (Si escalar => ese sera el orden del modelo AR)
 %%                     (T = longitud de la muestra)
-%% crit       * > Criterio de InformaciÛn               % (0)
+%% crit       * > Criterio de Informaci√≥n               % (0)
 %%                     (=0 Akaike, =1 Bayesiano) 
-%% IA             * > InformaciÛn Adicional                 % (0)
-%%                     (>0 calcula raÌces, =2 informaciÛn por pantalla) 
+%% IA             * > Informaci√≥n Adicional                 % (0)
+%%                     (>0 calcula ra√≠ces, =2 informaci√≥n por pantalla) 
 %% nfrec          * > frecuencias entre 0 y pi              % (512)
 %%                     (numero o vector con las frecuencias) 
 %% 
-%% arespt           < funciÛn AR-espectro
+%% arespt           < funci√≥n AR-espectro
 %% s2_e             < varianza residual del modelo AR
 %% n_retardos       < numero de retardos empleados en el modelo AR
 %% AR               < polinomio autorregresivo estimado
-%% raices           < raÌces del polinomio AR
-%% norma            < norma de las raÌces
-%% periodos         < periodos asociados a las raÌces
-%%   (los 3 ˙ltimos vectores ordenados seg˙n periodos de mayor a menor)
+%% raices           < ra√≠ces del polinomio AR
+%% norma            < norma de las ra√≠ces
+%% periodos         < periodos asociados a las ra√≠ces
+%%   (los 3 √∫ltimos vectores ordenados seg√∫n periodos de mayor a menor)
 %%
 %% Copyright (C) 1999, 2000, 2001, 2008  Marcos Bujosa
 
@@ -117,7 +117,7 @@ function [arespt,s2_e,n_retardos,AR,raices,norma,periodos] = aresp (varargin)
   if isempty(IA), IA=0; end
   if isempty(nfrec); nfrec=512; end
 
-  %% C¡LCULO DEL AR-ESPECTRO
+  %% C√ÅLCULO DEL AR-ESPECTRO
   if crit==0
     [AR,s2_e,n_retardos]=cia(y,lag_range,IA); % Crit. Inf. Akaike 
   elseif crit==1
@@ -130,10 +130,10 @@ function [arespt,s2_e,n_retardos,AR,raices,norma,periodos] = aresp (varargin)
   
   [arespt,w]=esptarma(1,AR,nfrec); % AR-Espectro.
 
-  %% INFORMACI”N ADICIONAL
-  if IA>0 | nargout > 4		% C·lculo de las raÌces
+  %% INFORMACI√ìN ADICIONAL
+  if IA>0 | nargout > 4		% C√°lculo de las ra√≠ces
     [periodos,raices,norma] = rootsana (AR);
-    if IA==2			% Se muestran las raÌces por la pantalla
+    if IA==2			% Se muestran las ra√≠ces por la pantalla
       fprintf(' \t RAICES \t    NORMA \t\t PERIODOS \n');
       raices_polinomio=[raices,real(norma),real(periodos)]
       figure; semilogy(w,arespt);
@@ -141,8 +141,8 @@ function [arespt,s2_e,n_retardos,AR,raices,norma,periodos] = aresp (varargin)
       set(gca,'XTickLabel',{'0','pi/2','pi'})
       title(sprintf('f(w): Ar-Espectro de la serie. AR(%g)',n_retardos))
       xlabel('frecuencias w')
-      ylabel('f(w) (Escala logarÌtmica)')
+      ylabel('f(w) (Escala logar√≠tmica)')
     end
-    pause
+    %pause
   end
  
