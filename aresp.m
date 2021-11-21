@@ -141,7 +141,7 @@ function [arespt,s2_e,n_retardos,AR,raices,norma,periodos] = aresp (varargin)
       set(gca,'XTickLabel',{'0','pi/2','pi'})
       title(sprintf('f(w): Ar-Espectro de la serie. AR(%g)',n_retardos))
       xlabel('frecuencias w')
-      ylabel('f(w) (Escala logarítmica)')
+      ylabel('f(w) (Escala en logs)')
     end
     %pause
   end
