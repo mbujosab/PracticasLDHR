@@ -1,0 +1,4 @@
+octave
+octave-control
+gnuplot
+ghostscript
