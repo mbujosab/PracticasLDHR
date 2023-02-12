@@ -1,4 +1,5 @@
 octave
+liboctave-dev
 octave-control
 gnuplot
-ghostscript
+ghostscript	
