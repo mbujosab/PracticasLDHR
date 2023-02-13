@@ -16,7 +16,7 @@
 
 ## usage:  y = dif (x,retardo) 
 ## 
-## Operador diferencia (1-B) ó (1-B^r), donde r=retardo 
+## Operador diferencia (1-B) Ã³ (1-B^r), donde r=retardo 
 ## dif(X) nos da la serie diferenciada: 
 ## Y(t)=X(t)-X(t-1) 
 ## dif(X,r) nos da la diferencia respecto al retardo r: 

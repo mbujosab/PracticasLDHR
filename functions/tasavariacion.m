@@ -16,7 +16,7 @@
 
 ## [ ret ] = tasavariacion (X)
 ##
-## tasavariacion calcula a tasa de variación de las columnas de X
+## tasavariacion calcula a tasa de variaciÃ³n de las columnas de X
 
 ## Author: Marcos Bujosa <marcos.bujosa@ccee.ucm.es>
 ## 

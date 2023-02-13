@@ -2,12 +2,12 @@ function [indice, valor]=maximos(y,n)
    
   %% usage:  [indice, valor] = maximos (y,n) 
   %% 
-  %% localiza los máximos locales de un vector de datos 
-  %% indice es la posición del máximo local,  
-  %% valor es el valor que toma el vector en esa posición. 
+  %% localiza los mÃ¡ximos locales de un vector de datos 
+  %% indice es la posiciÃ³n del mÃ¡ximo local,  
+  %% valor es el valor que toma el vector en esa posiciÃ³n. 
   %% 
-  %% Si se introduce el argumento "n", sólo localiza los n 
-  %% máximos de mayor valor.
+  %% Si se introduce el argumento "n", sÃ³lo localiza los n 
+  %% mÃ¡ximos de mayor valor.
   %% 
   %% Marcos Bujosa 1998, 1999, 2000, 2002
  
