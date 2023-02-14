@@ -1,5 +1,6 @@
 cd ${HOME}
-octave --no-gui --eval "addpath (fullfile (getenv (\"HOME\"), \"M-files\E4\")); savepath ();"
+octave --no-gui --eval "addpath (fullfile (getenv (\"HOME\"), \"M-files\"));           savepath ();"
+octave --no-gui --eval "addpath (fullfile (getenv (\"HOME\"), \"M-files\E4\"));        savepath ();"
 octave --no-gui --eval "addpath (fullfile (getenv (\"HOME\"), \"M-files\functions\")); savepath ();"
-octave --no-gui --eval "addpath (fullfile (getenv (\"HOME\"), \"M-files\OctMat\")); savepath ();"
-octave --no-gui --eval "addpath (fullfile (getenv (\"HOME\"), \"M-files\spcline\")); savepath ();"
+octave --no-gui --eval "addpath (fullfile (getenv (\"HOME\"), \"M-files\OctMat\"));    savepath ();"
+octave --no-gui --eval "addpath (fullfile (getenv (\"HOME\"), \"M-files\spcline\"));   savepath ();"
